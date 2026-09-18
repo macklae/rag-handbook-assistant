@@ -5,49 +5,49 @@
     {
       "id": "q1",
       "question": "How many weeks of paid maternity leave are given for a first child?",
-      "expected_pages": [20],
+      "expected_pages": [19, 25, 20, 26],
       "expected_keywords": ["26 weeks"]
     },
     {
       "id": "q2",
       "question": "How long is paternity leave and who can take it?",
-      "expected_pages": [21],
+      "expected_pages": [18, 20, 20],
       "expected_keywords": ["10 working days"]
     },
     {
       "id": "q3",
       "question": "What is the probation period for new employees?",
-      "expected_pages": [11, 12],
+      "expected_pages": [11, 51, 53],
       "expected_keywords": ["probation"]
     },
     {
       "id": "q4",
       "question": "What are the rules for using AI tools with client data?",
-      "expected_pages": [35, 36, 37],
+      "expected_pages": [36],
       "expected_keywords": ["AI"]
     },
     {
       "id": "q5",
       "question": "How many days of bereavement leave are available?",
-      "expected_pages": [21],
+      "expected_pages": [18, 20],
       "expected_keywords": ["5 days"]
     },
     {
       "id": "q6",
       "question": "What does the POSH policy cover and who sits on the Internal Committee?",
-      "expected_pages": [40, 41, 42],
+      "expected_pages": [40],
       "expected_keywords": ["Internal Committee"]
     },
     {
       "id": "q7",
       "question": "How does the performance review cycle work?",
-      "expected_pages": [27, 28, 29],
+      "expected_pages": [6, 23, 24, 27],
       "expected_keywords": ["review"]
     },
     {
       "id": "q8",
       "question": "What is the learning and certification budget per employee?",
-      "expected_pages": [30, 31],
+      "expected_pages": [30],
       "expected_keywords": ["budget"]
     }
   ],

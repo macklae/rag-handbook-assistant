@@ -5,3 +5,4 @@ __pycache__/
 data/chroma_db/
 data/uploads/
 .DS_Store
+eval/results/
