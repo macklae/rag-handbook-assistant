@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Enterprise Knowledge Assistant</title>
+<link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <h1>Enterprise Knowledge Assistant</h1>
+    <p class="sub">Ask questions about an uploaded PDF. Answers are grounded in retrieved chunks and cite page numbers.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="card">
+    <h2>1. Document</h2>
+    <div class="uploader">
+      <input type="file" id="pdfInput" accept="application/pdf" />
+      <button id="uploadBtn" class="primary">Upload &amp; index</button>
+      <button id="resetBtn" class="ghost">Clear index</button>
+    </div>
+    <div id="ingestStatus" class="status" hidden></div>
+    <div id="stats" class="stats"></div>
+  </section>
+
+  <section class="card">
+    <h2>2. Ask a question</h2>
+    <div class="askrow">
+      <input type="text" id="question" placeholder="e.g. How does maternity leave work?" autocomplete="off" />
+      <label class="topk">
+        Top K
+        <input type="number" id="topK" value="3" min="1" max="10" />
+      </label>
+      <button id="askBtn" class="primary">Ask</button>
+    </div>
+    <div class="examples">
+      <span>Try:</span>
+      <button class="chip" data-q="How does maternity leave work?">Maternity leave</button>
+      <button class="chip" data-q="What is the probation period and how is it confirmed?">Probation</button>
+      <button class="chip" data-q="What are the rules for using AI tools with client data?">AI tool usage</button>
+      <button class="chip" data-q="Who won the 2019 cricket world cup?">Off-topic (guardrail test)</button>
+    </div>
+  </section>
+
+  <section id="answerCard" class="card" hidden>
+    <h2>Answer</h2>
+    <div id="answerMeta" class="meta"></div>
+    <div id="answer" class="answer"></div>
+    <h3 class="sources-title">Retrieved chunks <span class="hint">(what the model was allowed to read)</span></h3>
+    <div id="chunks" class="chunks"></div>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <span>pypdf → chunking → text-embedding-3-small → ChromaDB → retrieval → Responses API</span>
+  <a href="/docs">API docs</a>
+</footer>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+:root {
+  --bg: #f6f7f9;
+  --card: #ffffff;
+  --ink: #16181d;
+  --muted: #6b7280;
+  --line: #e4e7ec;
+  --accent: #5b2d8e;
+  --accent-soft: #f2ecf9;
+  --ok: #0f7b4f;
+  --warn: #9a3412;
+  --warn-soft: #fff4ed;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+
+.topbar {
+  background: var(--card);
+  border-bottom: 1px solid var(--line);
+  padding: 22px 0 18px;
+  margin-bottom: 22px;
+}
+.topbar h1 { margin: 0 0 4px; font-size: 21px; color: var(--accent); }
+.sub { margin: 0; color: var(--muted); font-size: 13.5px; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-bottom: 18px;
+}
+.card h2 { margin: 0 0 14px; font-size: 14px; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); }
+
+.uploader, .askrow { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+
+input[type="file"] { flex: 1 1 260px; font-size: 13.5px; }
+input[type="text"] {
+  flex: 1 1 320px; padding: 10px 12px; font-size: 15px;
+  border: 1px solid var(--line); border-radius: 8px; background: #fff;
+}
+input[type="text"]:focus { outline: 2px solid var(--accent-soft); border-color: var(--accent); }
+
+.topk { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 6px; }
+.topk input { width: 58px; padding: 9px 8px; border: 1px solid var(--line); border-radius: 8px; }
+
+button { font: inherit; border-radius: 8px; cursor: pointer; border: 1px solid transparent; }
+button:disabled { opacity: .55; cursor: not-allowed; }
+.primary { background: var(--accent); color: #fff; padding: 10px 16px; font-weight: 600; }
+.primary:hover:not(:disabled) { background: #4a2475; }
+.ghost { background: #fff; color: var(--muted); border-color: var(--line); padding: 10px 14px; }
+.ghost:hover:not(:disabled) { color: var(--ink); }
+
+.examples { margin-top: 12px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; font-size: 12.5px; color: var(--muted); }
+.chip { background: var(--accent-soft); color: var(--accent); border: none; padding: 5px 11px; font-size: 12.5px; border-radius: 999px; }
+.chip:hover { background: #e7dcf5; }
+
+.status { margin-top: 12px; padding: 10px 12px; border-radius: 8px; font-size: 13.5px; }
+.status.ok { background: #eefaf3; color: var(--ok); }
+.status.err { background: var(--warn-soft); color: var(--warn); }
+.status.busy { background: #f1f2f4; color: var(--muted); }
+
+.stats { margin-top: 12px; font-size: 12.5px; color: var(--muted); display: flex; gap: 16px; flex-wrap: wrap; }
+.stats b { color: var(--ink); font-weight: 600; }
+
+.meta { font-size: 12px; color: var(--muted); margin-bottom: 10px; display: flex; gap: 14px; flex-wrap: wrap; }
+.badge { padding: 2px 8px; border-radius: 999px; font-weight: 600; }
+.badge.grounded { background: #eefaf3; color: var(--ok); }
+.badge.refused { background: var(--warn-soft); color: var(--warn); }
+
+.answer { white-space: pre-wrap; font-size: 15px; }
+
+.sources-title { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 22px 0 10px; font-weight: 600; }
+.hint { text-transform: none; letter-spacing: 0; font-weight: 400; }
+
+.chunks { display: grid; gap: 10px; }
+.chunk { border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; background: #fcfcfd; }
+.chunk-head { display: flex; gap: 12px; font-size: 11.5px; color: var(--muted); margin-bottom: 6px; font-weight: 600; }
+.chunk-text { font-size: 13px; color: #3a3f47; white-space: pre-wrap; max-height: 150px; overflow: auto; }
+
+.foot { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding-bottom: 32px; font-size: 12px; color: var(--muted); }
+.foot a { color: var(--accent); }
+
+@media (max-width: 560px) {
+  .askrow, .uploader { flex-direction: column; align-items: stretch; }
+  .topk { justify-content: space-between; }
+}

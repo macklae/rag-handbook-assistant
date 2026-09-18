@@ -1,0 +1,68 @@
+{
+  "document": "PROITBRIDGE_Employee_Handbook_2026_1.pdf",
+  "notes": "expected_pages are the handbook pages that actually contain the answer. Fill these in by looking at the PDF once. Retrieval is scored on whether any expected page appears in the retrieved chunks. expected_keywords are used for a rough answer-correctness check.",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "How many weeks of paid maternity leave are given for a first child?",
+      "expected_pages": [20],
+      "expected_keywords": ["26 weeks"]
+    },
+    {
+      "id": "q2",
+      "question": "How long is paternity leave and who can take it?",
+      "expected_pages": [21],
+      "expected_keywords": ["10 working days"]
+    },
+    {
+      "id": "q3",
+      "question": "What is the probation period for new employees?",
+      "expected_pages": [11, 12],
+      "expected_keywords": ["probation"]
+    },
+    {
+      "id": "q4",
+      "question": "What are the rules for using AI tools with client data?",
+      "expected_pages": [35, 36, 37],
+      "expected_keywords": ["AI"]
+    },
+    {
+      "id": "q5",
+      "question": "How many days of bereavement leave are available?",
+      "expected_pages": [21],
+      "expected_keywords": ["5 days"]
+    },
+    {
+      "id": "q6",
+      "question": "What does the POSH policy cover and who sits on the Internal Committee?",
+      "expected_pages": [40, 41, 42],
+      "expected_keywords": ["Internal Committee"]
+    },
+    {
+      "id": "q7",
+      "question": "How does the performance review cycle work?",
+      "expected_pages": [27, 28, 29],
+      "expected_keywords": ["review"]
+    },
+    {
+      "id": "q8",
+      "question": "What is the learning and certification budget per employee?",
+      "expected_pages": [30, 31],
+      "expected_keywords": ["budget"]
+    }
+  ],
+  "out_of_scope": [
+    {
+      "id": "oos1",
+      "question": "Who won the 2019 cricket world cup?"
+    },
+    {
+      "id": "oos2",
+      "question": "What is the capital of Brazil?"
+    },
+    {
+      "id": "oos3",
+      "question": "How do I reset my Netflix password?"
+    }
+  ]
+}
